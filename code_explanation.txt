@@ -1,0 +1,22 @@
+
+1. How are products stored in your program?
+
+Products are stored using a Product class. Each product has attributes such as name, ID, price, and stock quantity. The products are kept in a list so they can be easily added, updated, and searched. This allows the program to manage multiple products efficiently.
+
+2. How are purchase orders connected to vendors and products?
+
+Purchase orders are linked to both vendors and products using their IDs. Each order includes a vendor ID and the product(s) being ordered. This connection helps track which supplier provides which items. It also ensures orders are matched correctly with inventory items.
+
+3. How does receiving a shipment change inventory?
+
+When a shipment is received, the stock quantity of the related product is increased. The program updates the inventory by adding the received amount to the existing stock. This reflects the new available quantity in the system. The order status is also updated to show that it has been completed.
+
+4. How does your JSON save/load process work?
+
+The program saves data by converting objects into dictionaries and writing them to JSON files. When the program starts, it loads the JSON files and converts the data back into objects. This allows data to persist even after the program is closed. It ensures that inventory, vendors, and orders are not lost.
+
+5. What is one bug you fixed and how did you fix it?
+
+One bug was that stock quantities were not updating correctly after receiving a shipment. I fixed it by making sure the update function correctly added the received quantity to the existing stock. I also checked that the correct product ID was being used. After the fix, inventory updates worked properly.
+
+
